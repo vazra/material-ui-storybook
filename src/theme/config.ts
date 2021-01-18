@@ -1,10 +1,10 @@
-import { lightBlue, yellow } from '@material-ui/core/colors'
+import { lightBlue, yellow, red } from '@material-ui/core/colors'
 
 const themeConfig = {
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: lightBlue['A700'],
+      main: lightBlue.A700,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
@@ -21,9 +21,16 @@ const themeConfig = {
     // two indexes within its tonal palette.
     // E.g., shift from Red 500 to Red 300 or Red 700.
     tonalOffset: 0.2,
+    error: {
+      main: red.A400,
+    },
+    background: {
+      default: '#fff',
+    },
   },
   spacing: 8,
   typography: {
+    // pxToRem: (size: number) => `${size / 16}rem`, // note: this is added as a fix to breaking sttorybook with themes wihout this override err: "htmlFontSize is not defined"
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
