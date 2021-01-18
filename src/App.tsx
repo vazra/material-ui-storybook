@@ -2,9 +2,15 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Routes from './Routes'
+import { ThemeProvider } from '@material-ui/core'
+import theme from './theme'
 
 function App() {
-  return <Routes />
+  return (
+    <ThemeProvider theme={theme}>
+      <Routes />
+    </ThemeProvider>
+  )
 }
 
 export default App

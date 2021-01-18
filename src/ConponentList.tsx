@@ -4,6 +4,7 @@ import ButtonGroups from './components/ButtonGroups'
 import Buttons from './components/Buttons'
 // import Grids from './components/Grids'
 import Selects from './components/Selects'
+import Types from './components/Types'
 
 function ComponentList() {
   return (
@@ -17,6 +18,9 @@ function ComponentList() {
         </Grid>
         <Grid item>
           <Selects />
+        </Grid>
+        <Grid item>
+          <Types />
         </Grid>
       </Grid>
     </div>
